@@ -4,7 +4,7 @@ ARG USER_UID=1000
 ARG USER_GID=1000
 RUN apk add --no-cache python3 py3-pip
 RUN apk add --no-cache nodejs npm
-RUN apk add --no-cache git unzip sudo make; \
+RUN apk add --no-cache git unzip sudo make github-cli; \
     echo "${USER_NAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN addgroup -g ${USER_GID} ${USER_NAME}; \
     adduser -D -u ${USER_UID} -G ${USER_NAME} ${USER_NAME}
