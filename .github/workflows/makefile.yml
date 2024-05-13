@@ -20,7 +20,8 @@ jobs:
 
     - name: pipenv導入
       run: |
-        pip install pipenv --break-system-packages
+        pip install pipenv
+        
     - name: sphinxでビルド
       run: make html
 
