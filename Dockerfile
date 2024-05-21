@@ -8,6 +8,8 @@ RUN apk add --no-cache git unzip sudo make github-cli; \
     echo "${USER_NAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN addgroup -g ${USER_GID} ${USER_NAME}; \
     adduser -D -u ${USER_UID} -G ${USER_NAME} ${USER_NAME}
+ENV TZ=Asia/Tokyo
+RUN apk add --no-cache tzdata
 USER ${USER_NAME}
 WORKDIR /home/${USER_NAME}
 ENV PATH="/home/${USER_NAME}/.local/bin:/home/${USER_NAME}/node_modules/.bin:${PATH}"
