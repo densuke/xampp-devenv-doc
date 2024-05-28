@@ -10,7 +10,8 @@
    :maxdepth: 2
    :caption: Contents:
 
-   db/index
+   .. db/index
+   guide/index
 
 
 目次
