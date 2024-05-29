@@ -53,4 +53,3 @@
 :caption: compose.yml
 :linenos:
 :emphasize-lines: 13-
-## 削除していいもの
