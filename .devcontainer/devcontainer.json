@@ -21,7 +21,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"taichi.vscode-textlint"
+				"taichi.vscode-textlint",
+				"ms-python.python"
 			]
 		}
 	}
