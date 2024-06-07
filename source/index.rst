@@ -12,6 +12,7 @@
 
    .. db/index
    guide/index
+   reset/index
 
 
 目次
