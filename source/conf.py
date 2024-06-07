@@ -49,3 +49,14 @@ now = datetime.utcnow().replace(tzinfo=pytz.utc).astimezone(jst)
 
 html_last_updated_fmt = '%Y-%m-%d %H:%M'
 today_fmt = now.strftime(html_last_updated_fmt)
+
+# -- Options for HTML output ----------------------------------------------
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They must be specified in a list.
+html_static_path = ['_static']
+
+# Add custom JavaScript file
+html_js_files = [
+    'js/open_links_new_tab.js',
+]
