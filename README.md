@@ -3,6 +3,8 @@
 授業用XAMPPもどき環境(DB付き)のマニュアルです。
 Sphinxを用いたHTML組版をほどほどにしてくれます。
 
+組版されたドキュメント自体は[github pages](https://densuke.github.io/xampp-devenv-doc/)にて公開しています。
+
 # 使い方
 
 ローカルで使う場合、Python3とpipenvおよびGNU makeが必要です。
