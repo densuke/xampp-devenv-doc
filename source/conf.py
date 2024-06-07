@@ -5,6 +5,8 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import pytz
+from datetime import datetime
 
 project = 'Webアプリケーション開発 学習用コンテナについて'
 copyright = '2024, 佐藤 大輔'
@@ -37,3 +39,12 @@ myst_enable_extensions = [
 
 copybutton_prompt_is_regexp = True
 copybutton_prompt_text = r"^PS.*> +|^\$ +"
+
+add_function_parentheses = True
+add_module_names = True
+
+jst = pytz.timezone('Asia/Tokyo')
+now = datetime.now(jst)
+
+html_last_updated_fmt = '%Y-%m-%d %H:%M'
+today_fmt = now.strftime(html_last_updated_fmt)

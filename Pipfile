@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 selenium = "*"
+pytz = "*"
 
 [dev-packages]
 sphinx = "*"
