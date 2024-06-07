@@ -44,7 +44,8 @@ add_function_parentheses = True
 add_module_names = True
 
 jst = pytz.timezone('Asia/Tokyo')
-now = datetime.now(jst)
+now = datetime.utcnow().replace(tzinfo=pytz.utc).astimezone(jst)
+#now = datetime.now(jst)
 
 html_last_updated_fmt = '%Y-%m-%d %H:%M'
 today_fmt = now.strftime(html_last_updated_fmt)
