@@ -5,7 +5,7 @@
 最初から完全リセットをする前に、他のものが無いかをチェックしてから進めましょう。
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: 目次:
 
     docker-desktop-update.md
