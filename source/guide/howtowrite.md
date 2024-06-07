@@ -17,7 +17,7 @@ vscodeのDevContainer機能(`Ctrl-Shift-P` -> `HOGEHOGE`)を使い、PHP開発�
 以下のファイルがインデックスとして参照されます。
 参照の順番があるので注意してください(先に見つけた方が優先されます)。
 
-1. `index.html` ※ `htm`とかもいけるかもしれませんが今更非推奨
+1. `index.html` ※ `htm`は非推奨
 2. `index.php`
 
 ここでは、`public/index.php` を書いたとします。

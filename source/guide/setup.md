@@ -1,6 +1,6 @@
 # リポジトリの作成方法
 
-XAMPPベース開発を行う際に授業で使用しているテンプレートはこちらになります。
+XAMPPベース開発の際に授業で使用しているテンプレートはこちらになります。
 
 * [kd-it/xampp-devenv-template](https://github.com/kd-it/xampp-devenv-template)
 

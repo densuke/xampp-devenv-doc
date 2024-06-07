@@ -1,7 +1,7 @@
 # データベース周り
 ## データベースの操作
 
-データベースは phpMyAdminにて操作可能です。
+データベースはphpMyAdminにて操作可能です。
 同じくポートビューにて、 `phpmyadmin:80` の行からアクセス可能です。
 
 ```{image} images/phpmyadmin-port-view.png
@@ -35,7 +35,7 @@
 :caption: env.txt
 ```
 
-見るだけでもわかると思いますが、以下の構造で記述されています。
+見るだけでもわかるとおり、以下の構造で記述されています。
 
 * `MYSQL_ROOT_PASSWORD`: 万一特権アクセスが必要な場合に利用するパスワード(ほぼ使いません)
 * `MYSQL_DATABASE`: 作成するデータベース名
@@ -62,7 +62,12 @@ PHPの[PDO](https://www.php.net/manual/ja/class.pdo.php)(MySQLドライバ)に�
 :caption: public/test.php
 ```
 
-これで、`test.php`にブラウザでアクセス(ポートビューでブラウザ表示させた後、アドレスを表示して`/test.php`を付加)すると、以下のように見えます。
+これで、`test.php`にブラウザでアクセスすると、以下のように見えます。
+
+```{note}
+ポートビュー経由でブラウザ表示させた後、アドレスを表示して`/test.php`を付加することで確認できます。
+```
+
 初期状態ではテーブルが無いので0件と出ます。
 
 ```{image} images/list-tables-0.png

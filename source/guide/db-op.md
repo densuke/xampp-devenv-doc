@@ -1,11 +1,9 @@
 # データベースの構成変更について
 
-用意されているデータベースについて、
+用意されているデータベースについて、以下の操作をする場合に参照してください。
 
 * データベース名・アクセス情報を変えたい
 * テーブルを初期状態で準備したい
-
-という場合は、この資料を参考にしてください。
 
 (dbconfig)=
 ## データベース名・アクセス情報の変更
@@ -24,29 +22,28 @@
 
 内容を変更後、変更を反映させるためには、以下の手順で操作をしてください。
 
-1. 開発環境(DevContainer)からローカルの環境に一度戻ります
-    1. コマンドパレットを開きます
-    2. `Dev Containers: Reopen Folder Locally`を呼び出します
-    3. ウィンドウ左下の表示から「開発コンテナー」の文字が消えた形になるまで少し待ちます
+1. 開発環境(DevContainer)からローカルの環境に一度戻る
+    1. コマンドパレットを開く
+    2. `Dev Containers: Reopen Folder Locally`を呼び出す
+    3. ウィンドウ左下の表示から「開発コンテナー」の文字が消えた形になるまで少し待つ
        ```{image} images/in-devcontainer.png
        :caption: 60%
-       :align: left
+       :align: center
        ```
-       ↓
        ```{image} images/out-devcontainer.png
        :caption: 40%
-       :align: left
+       :align: center
        ```
-2. 一度DevContainerとボリューム(データベースのデータエリア)を削除します
-    1. ターミナルを開きます
-    2. プロンプトにて、以下のコマンドを入力します(コピペOK)
+2. 一度DevContainerとボリューム(データベースのデータエリア)を削除する
+    1. ターミナルを開く
+    2. プロンプトにて、以下のコマンドを入力します(コピー&ペーストOK)
         ```{code-block}
         :language: powershell
 
         PS> docker compose down --remove-orphans -v
         ```
-3. 再度DevContainerを開いてください
-    1. コマンドパレットを開きます
+3. 再度DevContainerを開く
+    1. コマンドパレットを開く
     2. `Dev Containers: Rebuild and Reopen in Container`
     3. "PHP開発環境" を選択
 
