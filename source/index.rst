@@ -14,12 +14,17 @@
    guide/index
    reset/index
 
+ソースコード
+====================================================
 
-目次
-==================
+本テキストは、Sphinxを使って組版しています。
+ソースを確認したい方は、`densuke/xampp-devenv-doc <https://github.com/densuke/xampp-devenv-doc.git>`_ を参照してください。
 
-* :ref:`genindex`
-* :ref:`search`
+.. 目次
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`search`
 
 .. * :ref:`modindex`
 
