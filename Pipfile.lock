@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "664bf08e830ca4b1b7e54ffd5ac8238018f83565165db91e796e8f95f4fb37e8"
+            "sha256": "458aa26cd3131ae4c3568a8666075b58f722900c2ce946262918920cc5e4ea5b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -63,14 +63,6 @@
                 "sha256:3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"
             ],
             "version": "==1.7.1"
-        },
-        "pytz": {
-            "hashes": [
-                "sha256:2a29735ea9c18baf14b448846bde5a48030ed267578472d8955cd0e7443a9812",
-                "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"
-            ],
-            "index": "pypi",
-            "version": "==2024.1"
         },
         "selenium": {
             "hashes": [
@@ -287,11 +279,15 @@
         },
         "docutils": {
             "hashes": [
-                "sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6",
-                "sha256:f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b"
+                "sha256:33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6",
+                "sha256:5e1de4d849fee02c63b040a4a3fd567f4ab104defd8a5511fbbc24a8a017efbc"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==0.20.1"
+            "version": "==0.19"
+        },
+        "docutils-ast-writer": {
+            "git": "git+https://github.com/shiguredo/docutils-ast-writer",
+            "ref": "6c93fee44f04eaed6012d13c1593012aecce3941"
         },
         "h11": {
             "hashes": [
@@ -439,6 +435,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==2.18.0"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:2a29735ea9c18baf14b448846bde5a48030ed267578472d8955cd0e7443a9812",
+                "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"
+            ],
+            "index": "pypi",
+            "version": "==2024.1"
         },
         "pyyaml": {
             "hashes": [

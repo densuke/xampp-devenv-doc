@@ -1,9 +1,16 @@
 {
-  "plugins": {},
+  "plugins": {
+    "rst": {
+      "command": "pipenv run rst2ast -q"
+    }
+  },
   "filters": {},
   "rules": {
     "preset-ja-spacing": true,
-    "preset-ja-technical-writing": true,
+    "preset-ja-technical-writing": {
+      "max": 80,
+      "ja-unnatural-alphabet": true
+    },
     "spellcheck-tech-word": true
   }
 }

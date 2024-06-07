@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 selenium = "*"
-pytz = "*"
 
 [dev-packages]
 sphinx = "*"
@@ -13,6 +12,8 @@ sphinx-copybutton = "*"
 myst-parser = "*"
 sphinx-rtd-theme = "*"
 sphinx-autobuild = "*"
+docutils-ast-writer = {ref = "shiguredo", git = "git+https://github.com/shiguredo/docutils-ast-writer"}
+pytz = "*"
 
 [requires]
 python_version = "3"
