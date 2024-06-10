@@ -25,7 +25,9 @@
 
 このエラーが発生した場合、最新の`densukest/xampp-devenv:alpine`イメージに更新をかけることで解決する。
 
-1. 開発コンテナーに入っている場合、いったん開発コンテナーを終了してローカルに戻る({menuselection}`Ctrl-Shift-P>>>R
+<!-- textlint-disable ja-technical-writing/no-unmatched-pair -->
+
+1. 開発コンテナーに入っている場合、いったん開発コンテナーを終了してローカルに戻る({menuselection}`Ctrl-Shift-P--R
 eopen Folder Locally`)
 2. ターミナルを開く
 3. 以下のコマンドを実行して、最新のイメージを取得する
@@ -34,6 +36,9 @@ eopen Folder Locally`)
     ```
 
 4. 再度開発コンテナーを起動し、問題が解消されていることを確認する(ページを開いて`dbselect.php`を実行する等)
+
+<!-- textlint-enable ja-technical-writing/no-unmatched-pair -->
+
 
 ## 補足事項
 
