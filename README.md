@@ -1,7 +1,7 @@
 # これはなに?
 
 授業用XAMPPもどき環境(DB付き)のマニュアルです。
-Sphinxを用いたHTML組版をほどほどにしてくれます。
+[Sphinx](https://www.sphinx-doc.org/ja/master/)を用いたHTML組版します。
 
 組版されたドキュメント自体は[github pages](https://densuke.github.io/xampp-devenv-doc/)にて公開しています。
 
