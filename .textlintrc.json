@@ -4,7 +4,9 @@
       "command": "pipenv run rst2ast -q"
     }
   },
-  "filters": {},
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-ja-spacing": true,
     "preset-ja-technical-writing": {
