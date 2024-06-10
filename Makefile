@@ -23,6 +23,15 @@ html-auto: pipenv
 	@echo "Starting auto-rebuild"
 	@pipenv run sphinx-autobuild -b html source build/html
 
+info:
+	@echo "======================================================="
+	@echo "組版は、ターミナルを開いて次のようにコマンドを打って下さい"
+	@echo "$$ make html-auto"
+	@echo "実行後ポートのビューからブラウザで接続すると確認できます。"
+	@echo "保存後自動的に組版が行われます"
+	@echo "======================================================="
+
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile pipenv
