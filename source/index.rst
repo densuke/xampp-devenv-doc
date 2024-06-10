@@ -15,11 +15,12 @@
    .. db/index
    guide/index
    reset/index
+   trouble/index
 
 ソースコード
 ====================================================
 
-本テキストは、Sphinxを使って組版しています。
+本テキストは、 `Sphinx <https://www.sphinx-doc.org/>`_ を使って組版しています。
 ソースを確認したい方は、`densuke/xampp-devenv-doc <https://github.com/densuke/xampp-devenv-doc.git>`_ を参照してください。
 
 .. 目次
