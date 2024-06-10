@@ -1,4 +1,4 @@
-# これはなに?
+# これはなにか
 
 授業用XAMPPもどき環境(DB付き)のマニュアルです。
 [Sphinx](https://www.sphinx-doc.org/ja/master/)を用いたHTML組版します。
@@ -13,9 +13,12 @@
 $ pip install pipenv
 ```
 
-※ 環境によっては `pip3` で実行する必要があるかもしれません。
+```{note}
+環境によっては `pip3` で実行する必要があるので注意してください。
+```
 
-その後、Sphinxで組版を行ってください。
+
+その後、Sphinxで組版してください。
 
 ```bash
 $ make html
