@@ -1,8 +1,8 @@
-# 「接続に失敗しました: could not find driver」と出力されてしまう
+# `could not find driver` と出力されてしまう
 
 ## 問題
 
-授業内で提示されたサンプルコード([例](https://2024web1.github.io/web_app_dev/db-crud/#select%E6%96%87))を使用した際に、以下のエラーメッセージが出力される。
+授業内で提示されたサンプルコード([例](https://2024web1.github.io/web_app_dev/db-crud/#select%E6%96%87))を使用した際に、以下のエラーメッセージが出力される。なお日本語テキスト(「接続に失敗しました」)は状況によるため、メッセージの本体である `could not find driver` に注目する。
 
 ```text
 接続に失敗しました: could not find driver
@@ -16,7 +16,7 @@
 
 ## 原因
 
-なんらかの理由で古い「pdo_mysqlドライバの入っていないイメージで起動している」状態となっていることが原因。
+なんらかの理由で「古いpdo_mysqlドライバの入っていないイメージ」で開発コンテナーが起動している状態となっていることが原因。
 よって、最新のDockerイメージに差し替えればよい。
 
 この症状は、以前の授業で[densukest/xampp-devenv:alpine](https://hub.docker.com/layers/densukest/xampp-devenv/alpine/images/sha256-2f5c7036ca15793823e36f8182de8e0b0460f3130960bfe1647c110e83c0b082?context=explore)をロードしたことのある環境であれば発生しうる状況になっている。
@@ -34,3 +34,17 @@ eopen Folder Locally`)
     ```
 
 4. 再度開発コンテナーを起動し、問題が解消されていることを確認する(ページを開いて`dbselect.php`を実行する等)
+
+## 補足事項
+
+本メッセージは、下記のPHPコードにより発生する、そのためエラーメッセージの出力コード(`try`〜`catch`での例外捕捉)を行っていないコードではメッセージが出力されないことに留意するしてください。
+
+```php
+try {
+    // PDOを用いてデータベースに接続する
+    $pdo = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    // 接続できなかった場合のエラーメッセージ
+    exit('データベースに接続できませんでした：' . $e->getMessage());
+}
+```
