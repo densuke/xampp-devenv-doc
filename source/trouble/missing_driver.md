@@ -35,7 +35,14 @@ eopen Folder Locally`)
     PS> docker image pull densukest/xampp-devenv:alpine
     ```
 
-4. 再度開発コンテナーを起動し、問題が解消されていることを確認する(ページを開いて`dbselect.php`を実行する等)
+4. 再度開発コンテナーを起動する、キャッシュを用いない形で再構築させる({menuselection}`Rebuild Container Without Cache`)こと
+    ```{image} images/rebuild-wo-cache.png
+    :alt: Rebuild Container Without Cache
+    :width: 60%
+    :align: center
+    ```
+
+5. 問題が解消されていることを確認する(ページを開いて`dbselect.php`を実行する等)
 
 <!-- textlint-enable ja-technical-writing/no-unmatched-pair -->
 
