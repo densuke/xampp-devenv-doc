@@ -16,6 +16,7 @@
    guide/index
    reset/index
    trouble/index
+   resources/index
 
 ソースコード
 ====================================================
