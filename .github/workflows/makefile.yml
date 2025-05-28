@@ -18,30 +18,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: act上での動きかを確認
+      id: run-act
+      run: |
+        if [ -n "${ACT}" ]; then
+          echo "act=true" >> $GITHUB_OUTPUT
+        else
+          echo "act=false" >> $GITHUB_OUTPUT
+        fi
     - name: ソースコード取得
       uses: actions/checkout@v4
 
-    - name: Python環境構築
-      uses: actions/setup-python@v5.1.0
-      with:
-        python-version: 3.*
-
-    - name: pipenv導入
-      run: |
-        pip install pipenv
+    - name: uvのセットアップ
+      uses: astral-sh/setup-uv@v5
         
     - name: sphinxでビルド
       run: make html
+    
+    - name: クリーンナップ(act)
+      if: steps.run-act.outputs.act == 'true'
+      run: |
+        rm -rf build
+        uv clean
 
+    # ここから下は、mainにpushされたときのみの実行にする
+    
     - name: GitHub Pagesの準備
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.run-act.outputs.act != 'true'
       uses: actions/configure-pages@v5.0.0
 
     - name: Upload GitHub Pages artifact
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.run-act.outputs.act != 'true'
       uses: actions/upload-pages-artifact@v3.0.1
       with:
         # Path of the directory containing the static assets.
         path: build/html
+
     - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.run-act.outputs.act != 'true'
       uses: actions/deploy-pages@v4
 
-              
+
