@@ -1,0 +1,19 @@
+[project]
+name = "xampp-devenv-doc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "selenium>=4.33.0",
+]
+
+[dependency-groups]
+dev = [
+    "myst-parser>=4.0.1",
+    "pytz>=2025.2",
+    "sphinx>=8.2.3",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-rtd-theme>=3.0.2",
+]
