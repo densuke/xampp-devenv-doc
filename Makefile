@@ -4,7 +4,7 @@
 # You can set these variables from the command line, and also
 # from the environment for the first two.
 SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
+SPHINXBUILD   ?= uv run sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 
@@ -14,14 +14,12 @@ help:
 
 .PHONY: help Makefile
 
-pipenv:
-	pipenv install --dev
 
 
-html-auto: pipenv
-	make html
+html-auto: 
+	uv run make html
 	@echo "Starting auto-rebuild"
-	@pipenv run sphinx-autobuild -b html source build/html
+	uv run sphinx-autobuild -b html source build/html
 
 info:
 	@echo "======================================================="
@@ -34,5 +32,5 @@ info:
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile pipenv
-	pipenv run $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+%: Makefile
+	uv run $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
