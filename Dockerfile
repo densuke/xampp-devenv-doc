@@ -16,7 +16,7 @@ ENV LANG=ja_JP.UTF-8
 ENV LC_ALL=ja_JP.UTF-8
 RUN userdel -r ubuntu && \
     groupadd -g ${USER_GID} ${USER_NAME} && \
-    useradd -m -u ${USER_UID} -g ${USER_GID} ${USER_NAME}
+    useradd -m -u ${USER_UID} -g ${USER_GID} -s /bin/bash ${USER_NAME}
 COPY --from=uv /usr/local/bin/uv /usr/local/bin/uvx /usr/local/bin/
 USER ${USER_NAME}
 WORKDIR /home/${USER_NAME}
