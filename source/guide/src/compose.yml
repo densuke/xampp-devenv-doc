@@ -1,17 +1,18 @@
 services:
   web:
-    image: densukest/xampp-devenv:alpine
-    #build: build/
-    # ローカルでビルドしたい場合は、imageをコメントアウトしてbuildを有効化してください
-    # github上にコミットするときは、必ずbuildキーは無効化してください(mainにmergeする際にチェックしています)
+    image: ghcr.io/densuke-st/xampp-devenv:20250530233720
+    # build: build/
+    # 2025/5/28以降 ビルド用のデータはこのリポジトリには含まれておりません
+    #  -> https://github.com/densuke-st/xampp-devenv-image-docker
     #build: env
     volumes:
       - ./public:/var/www/html:cached
+      - .:/app:cached
     env_file:
       - env.txt
 
   db:
-    image: ghcr.io/densuke/mysql:main
+    image: ghcr.io/densuke/mysql:1748379755
     #build: db/build
     env_file:
       - env.txt
