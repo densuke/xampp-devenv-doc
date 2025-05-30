@@ -23,7 +23,8 @@
 			"extensions": [
 				"taichi.vscode-textlint",
 				"ms-python.python",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"3w36zj6.textlint"
 			],
 			"files": {
 				"exclude": [
