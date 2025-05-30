@@ -46,9 +46,9 @@
 * `db`ディレクトリ
 
 また、`compose.yml`ファイルを書き換えてデータベースの起動を抑制するといいでしょう。
-下記の13行目(`db:`)以降を消すか、コメントアウト(`#`)してください。
+下記の14行目(`db:`)以降を消すか、コメントアウト(`#`)してください。
 
 ```{literalinclude} src/compose.yml
 :caption: compose.yml
 :linenos:
-:emphasize-lines: 13-
+:emphasize-lines: 14-
