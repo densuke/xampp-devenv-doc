@@ -11,7 +11,7 @@
 `web` サービスは、Webアプリケーションを作成する、確認する目的で動かしています。
 
 - PHPランタイム
-- Webサーバー(Apache httpd) ※ ubuntuベースのみ
+- Webサーバー(Apache httpd) ※ Ubuntuベースのみ
 
 Ubuntuベースのイメージでは、Apache httpdの機能拡張でPHPが組み込まれています。
 AlpineベースではPHPの内蔵サーバーで代用しています(`php -S`)。
